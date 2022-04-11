@@ -1,0 +1,59 @@
+body {
+  background: rgb(112, 145, 216);
+  max-width: 300;
+}
+h1 {
+  color: blue;
+  font-family: "Raleway" sans-serif;
+}
+.date {
+  font-weight: 100px;
+  font-size: 28px;
+  color: black;
+}
+
+h2 {
+  font-size: 40px;
+}
+.search {
+  position: relative;
+  top: 0;
+  left: 550px;
+}
+.sun-icon {
+  color: yellow;
+  font-size: 70px;
+}
+.location-icon {
+  color: red;
+}
+
+.news {
+  position: relative;
+  top: 0;
+  right: -120px;
+  padding: 20px;
+}
+
+.weather-app {
+  position: absolute;
+  top: 228px;
+  left: 550px;
+  padding: 20px;
+}
+p {
+  font-size: 30px;
+  color: blue;
+}
+.coder {
+  color: blueviolet;
+  font-size: 15px;
+  text-align: center;
+}
+.preciseButton {
+  display: block;
+  margin: 0 auto;
+  background: rgb(160, 10, 97);
+  color: #fff;
+  padding: 10px 20px;
+}
