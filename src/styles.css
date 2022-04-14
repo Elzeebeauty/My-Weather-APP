@@ -45,7 +45,7 @@ p {
   font-size: 30px;
   color: blue;
 }
-.coder {
+.githublink {
   color: blueviolet;
   font-size: 15px;
   text-align: center;
@@ -64,7 +64,4 @@ p {
 .rightWing {
   display: inline;
   font-weight: 15px;
-}
-.hostlink {
-  text-align: center;
 }
