@@ -57,3 +57,11 @@ p {
   color: #fff;
   padding: 10px 20px;
 }
+.weather-description {
+  font-size: 25px;
+  color: #adff2f;
+}
+.rightWing {
+  display: inline;
+  font-weight: 15px;
+}
