@@ -37,85 +37,76 @@
 
     </p>
 
-    <div class="card news" style="width: 15rem;">
-        <img src="images/News-bg.jpg" width "50px" ; class="card-img-top" alt="..">
-        <div class="card-body">
-            <h2 class="card-title">News Feed</h2>
-            <p class="card-text"><br />
-                It is due to rain soonest...
-            </p>
-            <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-    </div>
-
-    <div class="card weather-app" style="width: 300px;">
+    <div class="card weather-app">
+        <div class="row g-0">
+            <div class="col-md-6">
         <img src="images/sky-bg.jpg" width "50px" ; class="card-img-top" alt="sky image">
-        <div class="card-body">
-            <h2 class="card-title" id="current-time">Today
-                13:00
+    </div>
+        <div class="col-md-6">
+            <div class="card-body">
+            <h2 class="card-title">
             </h2>
-            <p class="card-text">
-            <h3>
-                <span class="temperature" id=current-temp> 17 </span>
-
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <i class="fa-solid fa-calendar calendar-icon" id="current-time">Today, <br /> 13:00</i>
+                </li>
+            <li class="list-group-item">
+               <p> <span class="temperature" id=current-temp> 17 </span>
                 <span class="degree-temp">
                     <a href="#" id="celsuis">℃</a>
                     <a href="#" id="fahrenheit">℉</a>
-                    <p class="weather-description"> It is sunny today </p>
                 </span>
                 <i class="fa-solid fa-sun sun-icon"></i>
-            </h3>
-            </p>
-            <div class="col-6" id="right-wing">
-                <p> Humidity: <span class="rightWing" id="current-humidity">20</span>
-                    % </p>
-                <p> Windspeed: <span class="rightWing" id="current-windspeed"> 6 </span> km/hr </p>
+        </li>
+                <li class="list-group-item" id="right-wing">
+                    <p> Humidity: <span class="rightWing" id="current-humidity">20</span>
+                        % </p>
+                    <p> Wind: <span class="rightWing" id="current-windspeed"> 6 </span> km/h </p>
+                    <i class="fa-solid fa-location-dot location-icon">
+                        <span id="present-city"> Enugu, Nigeria </span>
+                    </i>
+            </li>
+            </ul>
             </div>
-            <div>
-            </div>
-
-            <i class="fa-solid fa-location-dot location-icon">
-                <span id="present-city"> Enugu, Nigeria </span>
-            </i>
-
         </div>
+        </div>
+    </div>   
     </div>
-    </div>
-
+            </div>
     <br />
-    <h4>
         <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="card">
+            <div class="row align-items-center">
+                <h3>5-Days Weather Forecast</h3>
+                <div class="col-3">
+                    <div class="card text-center">
                         <p> Tomorrow
                         <div>18℃ | ℉</div>
                         <i class="fa-solid fa-cloud"></i>
                         </p>
                     </div>
                     <div class="col-sm">
-                        <div class="card">
+                        <div class="card text-center">
                             <p> Friday
                             <div>17℃ | ℉</div>
                             <i class="fa-solid fa-cloud-showers-heavy"></i>
                             </p>
                         </div>
                         <div class="col-sm">
-                            <div class="card">
+                            <div class="card text-center">
                                 <p> Saturday
                                 <div>12℃ | ℉</div>
                                 <i class="fa-solid fa-cloud-showers-heavy"></i>
                                 </p>
                             </div>
                             <div class="col-sm">
-                                <div class="card">
+                                <div class="card text-center">
                                     <p> Sunday
                                     <div>22℃ | ℉</div>
                                     <i class="fa-solid fa-cloud-sun-rain"></i>
                                     </p>
                                 </div>
                                 <div class="col-sm">
-                                    <div class="card">
+                                    <div class="card text-center">
                                         <p> Monday
                                         <div>33℃ | ℉</div>
                                         <i class="fa-solid fa-sun"></i>
@@ -128,12 +119,7 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-
-    </h4>
     <br />
-    
     <p class="githublink">
         <a href="https://github.com/Elzeebeauty/My-Weather-APP">Open-source code </a>
     ,by Wofai Martins 👩‍💻</p>

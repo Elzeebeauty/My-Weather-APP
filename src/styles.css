@@ -28,17 +28,10 @@ h2 {
   color: red;
 }
 
-.news {
+.weather-app {
   position: relative;
   top: 0;
   right: -120px;
-  padding: 20px;
-}
-
-.weather-app {
-  position: absolute;
-  top: 228px;
-  left: 550px;
   padding: 20px;
 }
 p {
