@@ -23,12 +23,25 @@ function formatDate(now) {
     "Saturday",
   ];
 
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   let day = days[now.getDay()];
-  let months = now.getMonth() + 1;
-  if (months < 10) {
-    months = `0${months}`;
-  }
-  return `${day}, ${months}/${date}/${years}, ${hours}:${minutes}`;
+  let month = months[now.getMonth()];
+
+  return `${day}, ${month} ${date} ${years}, ${hours}:${minutes}`;
 }
 
 let now = new Date();
@@ -37,44 +50,44 @@ dateTime.innerHTML = formatDate(now);
 
 function searchCity(event) {
   event.preventDefault();
-  let city = document.querySelector("#present-city");
   let inputCity = document.querySelector("#cityInput");
-  city.innerHTML = inputCity.value;
+  searchCity(inputCity.value);
+}
 
-  let searchCity = document.querySelector("#cityInput");
+function searchCity(city) {
   let apiKey = "e4ed7896f0b74bd1c1058cf4259ba869";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCity.value}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-  function displayTemp(response) {
-    let presentCity = response.data.name;
-    let currentTemp = Math.round(response.data.main.temp);
-    let cityElement = document.querySelector("#present-city");
-    let tempElement = document.querySelector("#current-temp");
-    let descriptionElement = document.querySelector("#description");
-    let precipitationElement = document.querySelector("#current-precipitation");
-    let humidityElement = document.querySelector("#current-humidity");
-    let windElement = document.querySelector("#current-windspeed");
-    let iconElement = document.querySelector("#weather-icon");
-
-    celsiusTemperature = Math.round(response.data.main.temp);
-
-    cityElement.innerHTML = presentCity;
-    tempElement.innerHTML = `${currentTemp}°C`;
-    descriptionElement.innerHTML = response.data.weather[0].description;
-    precipitationElement.innerHTML = response.data.main.precipitation;
-    humidityElement.innerHTML = response.data.main.humidity;
-    windElement.innerHTML = Math.round(response.data.wind.speed);
-    iconElement.setAttribute(
-      "src",
-      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
-    iconElement.setAttribute("alt", response.data.weather[0].description);
-  }
   axios.get(apiUrl).then(displayTemp);
 }
 
-let form = document.querySelector("#cityInput");
-form.addEventListener("submit", searchCity);
+function displayTemp(response) {
+  let currentTemp = Math.round(response.data.main.temp);
+  let cityElement = document.querySelector("#present-city");
+  let tempElement = document.querySelector("#current-temp");
+  let descriptionElement = document.querySelector("#description");
+  let precipitationElement = document.querySelector("#current-precipitation");
+  let humidityElement = document.querySelector("#current-humidity");
+  let windElement = document.querySelector("#current-windspeed");
+  let iconElement = document.querySelector("#weather-icon");
+
+  celsiusTemperature = Math.round(response.data.main.temp);
+
+  cityElement.innerHTML = response.data.name;
+  tempElement.innerHTML = `${currentTemp}°C`;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  precipitationElement.innerHTML = response.data.main.precipitation;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+}
+
+let form = document.querySelector("#search-city");
+form.addEventListener("submit", search);
 
 function displayLocation(position) {
   let latitude = position.coords.latitude;
@@ -115,7 +128,7 @@ button.addEventListener("click", getCurrentPosition);
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 
-let celsiusLink = document.querySelector("#celsius-active");
+let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 searchCity("Enugu");
