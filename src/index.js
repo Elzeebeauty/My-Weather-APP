@@ -48,13 +48,13 @@ let now = new Date();
 let dateTime = document.querySelector("#current-date");
 dateTime.innerHTML = formatDate(now);
 
-function searchCity(event) {
+function handleSubmit(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#cityInput");
-  searchCity(inputCity.value);
+  search(inputCity.value);
 }
 
-function searchCity(city) {
+function search(city) {
   let apiKey = "e4ed7896f0b74bd1c1058cf4259ba869";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -62,24 +62,24 @@ function searchCity(city) {
 }
 
 function displayTemp(response) {
-  let currentTemp = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#present-city");
   let tempElement = document.querySelector("#current-temp");
   let descriptionElement = document.querySelector("#description");
   let precipitationElement = document.querySelector("#current-precipitation");
   let humidityElement = document.querySelector("#current-humidity");
   let windElement = document.querySelector("#current-windspeed");
+  let dateElement = document.querySelector("#current-date");
   let iconElement = document.querySelector("#weather-icon");
 
   celsiusTemperature = response.data.main.temp;
   tempElement.innerHTML = Math.round(celsiusTemperature);
 
   cityElement.innerHTML = response.data.name;
-  tempElement.innerHTML = `${currentTemp}°C`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   precipitationElement.innerHTML = response.data.main.precipitation;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -88,7 +88,7 @@ function displayTemp(response) {
 }
 
 let form = document.querySelector("#search-city");
-form.addEventListener("submit", searchCity);
+form.addEventListener("submit", handleSubmit);
 
 function displayLocation(position) {
   let latitude = position.coords.latitude;
@@ -132,4 +132,4 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-searchCity("Enugu");
+search("Enugu");
