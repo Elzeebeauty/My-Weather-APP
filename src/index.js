@@ -71,7 +71,8 @@ function displayTemp(response) {
   let windElement = document.querySelector("#current-windspeed");
   let iconElement = document.querySelector("#weather-icon");
 
-  celsiusTemperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  tempElement.innerHTML = Math.round(celsiusTemperature);
 
   cityElement.innerHTML = response.data.name;
   tempElement.innerHTML = `${currentTemp}°C`;
@@ -87,7 +88,7 @@ function displayTemp(response) {
 }
 
 let form = document.querySelector("#search-city");
-form.addEventListener("submit", search);
+form.addEventListener("submit", searchCity);
 
 function displayLocation(position) {
   let latitude = position.coords.latitude;
