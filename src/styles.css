@@ -1,74 +1,112 @@
-body {
-  background: rgb(112, 145, 216);
+.card{
+  margin: 0 auto;
+  max-width: max-content;
 }
 .container {
-  color: rgba(49, 49, 114, 0.664);
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 20px;
-  width: 600px;
-  display: block;
-  position: relative;
-  top: 50px;
-  margin:30px auto;
-  padding: 20px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 20px 20px 0 rgba(49, 49, 114, 0.664);
-  height: 500px;
+  padding-top: 30px;
+  padding-bottom: -5px;
+  text-align: center;
   }
 
-h1 {
-  font-size: 20px;
-  margin-top: 25px;
-  margin-bottom: 0;
-  font-weight: 400px;
+.search-icon {
+  font-size: 100px;
 }
 
-h2
-{
-  font-weight: lighter;
-  font-size: 18px;
-}
 .search {
-  position: relative;
-  top: 0;
-  left: 550px;
+  position: absolute;
+  top: 20px;
+  left: 183px;
+  border-radius: 26px;
+  border-color: transparent;
+  text-align: center;
 }
-.sun-emoji {
+
+.title {
+  position: absolute;
+  top: 180px;
+  left: 30px;
+  color: floralwhite;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 37px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.title, #present-city{
+  position:absolute;
+  top: 100px;
+  left: 129px;
+  text-align: center;
+  color:red;
+  font-weight:100;
+}
+
+.fa-solid {
   font-size: 70px;
-  color: yellow;
+  color: #fff;
+  margin: 10px;
 }
-#present-city {
-  color: red;
-  font-size: 26px;
-}
-.weather-app
-{
-  font-size: 16px;
-  color: rgb(119, 0, 255);
-  position: relative;
-  top:16%;
-  right: 50%;
-}
-.githublink {
-  position: relative;
-  bottom: -70px;
-  color: blueviolet;
-  font-size: 15px;
-}
+
 .preciseButton {
-  display: block;
-  margin: 0 auto;
-  background: rgb(160, 10, 97);
   color: #fff;
   padding: 10px 20px;
 }
-#weather-description {
-  font-size: 25px;
-  color: blueviolet;
+#current-time{
+position: relative;
+top: 89px;
+left: -100px;
+text-align: center;
+font-size: 18px;
 }
-.rightWing {
-  display: inline;
-  font-weight: 15px;
+#current-date{
+  position: relative;
+  top: 70px;
+  left: -90px;
+  font-size: 17px;
+  text-align: center;
+}
+
+.weather-condition {
+  position: absolute;
+  top: 410px;
+  left: 207px;
+  color:darkblue;
+  font-weight: bold;
+  list-style: none;
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 20px;
+}
+.card-text{
+  position: absolute;
+  top: 320px;
+  left: 138px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  width: 100%;
+  font-weight: bold;
+  font-size: 27px;
+  color: floralwhite;
+}
+.temperature .active{
+  color: rgb(150, 56, 64);
+  text-decoration:floralwhite;
+}
+#celsuis:hover,
+#fahrenheit:hover {
+color: rgb(207, 64, 71);
+}
+#fahrenheit,
+#celsuis {
+text-decoration: none;
+}
+.coder {
+  position: relative;
+  top: auto;
+  left: 0;
+  color: rgb(44, 68, 44);
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

@@ -13,64 +13,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
 </head>
 
 <body>
     <div class="container">
         <h1 class="shadow p-3 mb-5 bg-white rounded">Weather Forecast
         </h1>
-    </div>
-    </h1>
+    <div class="card weather-app" style="width: 40rem">
+        <img src="images/sky-bg.jpg" class="card-img-top" alt="sky image">
     <p>
     <div class="search">
         <form id="search-city">
             <input type="search" placeholder="Enter Current City" autofocus="on" id="cityInput" />
             <button type="submit" class="btn btn-primary">Search</button>
             <i class="fa-solid fa-magnifying-glass"></i>
-        </form>
         <div class="preciseButton">
             <button type="button" class="btn btn-success " id="current-button">Current Location</button>
-    
+    </form>
         </div>
     </div>
-    
     </p>
-    
-    <div class="card weather-app" style="width: 300px;">
-        <img src="images/sky-bg.jpg" width="50px" ; class="card-img-top" alt="sky image">
-        <div class="card-body">
-            <h2 class="card-title" id="current-date">Today
-                13:00
-            </h2>
-            <p class="card-text">
-            <h3>
+    <div class="row">
+        <div class="col-3">
+    <i class="fa-solid fa-location-dot location-icon">
+       <div class="title">
+        <h2 id="present-city"> Enugu, Nigeria </h2>
+    </i>
+            <p class="card-title" id="current-time"> Last Updated:
+            </p><span class="time" id="current-date">13:00
+            </span>
+        </div>
+            <h3 class="card-text">
                 <span class="temperature" id=current-temp> 17 </span>
-    
                 <span id="degree-temp">
-                    <a href="#" id="celsuis" class="active">℃</a>
+                    <a href="#" id="celsuis" class="active">℃</a>|
                     <a href="#" id="fahrenheit">℉</a>
-                    <p id="weather-description"> It is sunny today </p>
-                </span>
-                <i class="fa-solid fa-sun sun-icon" id="weather-icon"></i>
-            </h3>
-            </p>
-            <div class="col-6" id="right-wing">
-                <p> Precipitation: <span class="rightWing" id="current-precipitation">70</span>%</p>
-                <p> Humidity: <span class="rightWing" id="current-humidity">20</span>
-                    % </p>
-                <p> Windspeed: <span class="rightWing" id="current-windspeed"> 6 </span> km/h </p>
-            </div>
+                    </span>
+                </h3>
+                <ul class="weather-condition">
+                    <img src="" alt="sun" id="icon" class="float-left" />
+                    <i class="fa-solid fa-sun sun-icon" id="weather-icon"></i>
+                    <li id="weather-description"> It is sunny today</li>
+                <li> Precipitation: <span id="current-precipitation">70</span>%</li>
+                <li> Humidity: <span id="current-humidity">20</span>
+                    % </li>
+                <li> Windspeed: <span id="current-windspeed"> 6 </span> km/h </li>
+                </ul>
             <div>
             </div>
-    
-            <i class="fa-solid fa-location-dot location-icon">
-                <span id="present-city"> Enugu, Nigeria </span>
-            </i>
-        </div>
     </div>
     </div>
-
+    </div>
     <br />
     <h4>
         <div class="container">
@@ -105,10 +99,12 @@
         </div>
     </h4>
     <br />
+    <div class="coder">
     <small>This Project was coded by <strong>Wofai Elizabeth Martins</strong> <a href="https://github.com/Elzeebeauty/My-Weather-APP"
             target="_blank">open-source on GitHub</a>
         and <a href="https://thunderous-pegasus-d51d41.netlify.app/" target="_blank">hosted on Netlify</a>
     </small>
+    </div>
     <script src="src/index.js"></script>
 </body>
 
