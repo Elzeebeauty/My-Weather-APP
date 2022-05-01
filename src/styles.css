@@ -38,13 +38,13 @@
   top: 100px;
   left: 129px;
   text-align: center;
-  color:red;
+  color:crimson;
   font-weight:100;
 }
 
-.fa-solid {
-  font-size: 70px;
-  color: #fff;
+.sun-icon {
+  font-size: 80px;
+  color: rgb(252, 248, 24);
   margin: 10px;
 }
 
