@@ -23,23 +23,22 @@
 }
 
 .title {
-  position: absolute;
-  top: 180px;
-  left: 30px;
-  color: floralwhite;
+   color: floralwhite;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 37px;
+  font-size: 7px;
   font-weight: bold;
   text-transform: capitalize;
 }
-.title, #present-city{
+#present-city{
   position:absolute;
-  top: 100px;
-  left: 129px;
+  top: 228px;
+  left: 170px;
   text-align: center;
-  color:crimson;
+  color:rgb(17, 31, 13);
+  font-size: 60px;
   font-weight:100;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .sun-icon {
@@ -53,23 +52,23 @@
   padding: 10px 20px;
 }
 #current-time{
-position: relative;
-top: 89px;
-left: -100px;
+position: absolute;
+top: 120px;
+left: 45px;
 text-align: center;
 font-size: 18px;
 }
 #current-date{
-  position: relative;
-  top: 70px;
-  left: -90px;
+  position: absolute;
+  top: 140px;
+  left: 45px;
   font-size: 17px;
   text-align: center;
 }
 
 .weather-condition {
   position: absolute;
-  top: 410px;
+  top: 460px;
   left: 207px;
   color:darkblue;
   font-weight: bold;
@@ -80,18 +79,18 @@ font-size: 18px;
 }
 .card-text{
   position: absolute;
-  top: 320px;
-  left: 138px;
-  font-family: 'Raleway', sans-serif;
+  top: 368px;
+  left: 10px;
+  font-family: fantasy, sans-serif;
   text-align: center;
   width: 100%;
   font-weight: bold;
-  font-size: 27px;
-  color: floralwhite;
+  font-size: 40px;
+  color: #fff;
 }
 .temperature .active{
   color: rgb(150, 56, 64);
-  text-decoration:floralwhite;
+  text-decoration: none;
 }
 #celsuis:hover,
 #fahrenheit:hover {
@@ -102,11 +101,10 @@ color: rgb(207, 64, 71);
 text-decoration: none;
 }
 .coder {
-  position: relative;
-  top: auto;
-  left: 0;
-  color: rgb(44, 68, 44);
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  line-height: 40px;
+  margin-top: auto;
+  margin-bottom: 50px;
 }
