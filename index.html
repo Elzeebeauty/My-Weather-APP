@@ -20,7 +20,7 @@
     <div class="container">
         <h1 class="shadow p-3 mb-5 bg-white rounded">Weather Forecast
         </h1>
-    <div class="card weather-app" style="width: 40rem">
+    <div class="card weather-app" style="width: 35rem">
         <img src="images/sky-bg.jpg" class="card-img-top" alt="sky image">
     <p>
     <div class="search">
@@ -45,15 +45,13 @@
             <h3 class="card-text">
                 <span class="temperature" id=current-temp> 17 </span>
                 <span id="degree-temp">
-                    <a href="#" id="celsuis" class="active">℃</a>|
-                    <a href="#" id="fahrenheit">℉</a>
+                    <a href="#" id="celsius" class="active">℃</a> |
+                    <a href="#" id="fahrenheit"> ℉</a>
                     </span>
                 </h3>
                 <ul class="weather-condition">
                     <img src="" alt="" id="icon" class="float-left" />
-                    <i class="fa-solid fa-sun sun-icon" id="weather-icon"></i>
                     <li id="weather-description"> It is sunny today</li>
-                <li> Precipitation: <span id="current-precipitation">70</span>%</li>
                 <li> Humidity: <span id="current-humidity">20</span>
                     % </li>
                 <li> Windspeed: <span id="current-windspeed"> 6 </span> km/h </li>
@@ -61,48 +59,21 @@
             <div>
             </div>
     </div>
-    </div>
-    </div>
+</div>
+
     <br />
     <h4>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    Tomorrow
-                    <div>18℃ | ℉</div>
-                    <i class="fa-solid fa-cloud"></i>
-                </div>
-                <div class="col-sm">
-                    Friday
-                    <div>17℃ | ℉</div>
-                    <i class="fa-solid fa-cloud-showers-heavy"></i>
-                </div>
-                <div class="col-sm">
-                    Saturday
-                    <div>12℃ | ℉</div>
-                    <i class="fa-solid fa-cloud-showers-heavy"></i>
-                </div>
-                <div class="col-sm">
-                    Sunday
-                    <div>22℃ | ℉</div>
-                    <i class="fa-solid fa-cloud-sun-rain"></i>
-                </div>
-                <div class="col-sm">
-                    Monday
-                    <div>33℃ | ℉</div>
-                    <i class="fa-solid fa-sun"></i>
-                </div>
-            </div>
-        </div>
+        <div class="weather-forecast" id="forecast">
         </div>
     </h4>
-    <br />
+    </div>
+            
     <div class="coder">
     <small>This Project was coded by <strong>Wofai Elizabeth Martins</strong> <a href="https://github.com/Elzeebeauty/My-Weather-APP"
             target="_blank">open-source on GitHub</a>
         and <a href="https://thunderous-pegasus-d51d41.netlify.app/" target="_blank">hosted on Netlify</a>
     </small>
-    </div>
+</div>
     <script src="src/index.js"></script>
 </body>
 

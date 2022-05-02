@@ -48,6 +48,34 @@ let now = new Date();
 let dateTime = document.querySelector("#current-date");
 dateTime.innerHTML = formatDate(now);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class"col-sm">
+        <div class="weather-forecast-date">${day}</div>
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          width="42"
+          />
+          <div class ="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
+        </div>
+      </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let inputCity = document.querySelector("#cityInput");
@@ -64,8 +92,7 @@ function search(city) {
 function displayTemp(response) {
   let cityElement = document.querySelector("#present-city");
   let tempElement = document.querySelector("#current-temp");
-  let descriptionElement = document.querySelector("#description");
-  let precipitationElement = document.querySelector("#current-precipitation");
+  let descriptionElement = document.querySelector("#weather-description");
   let humidityElement = document.querySelector("#current-humidity");
   let windElement = document.querySelector("#current-windspeed");
   let dateElement = document.querySelector("#current-date");
@@ -76,7 +103,6 @@ function displayTemp(response) {
 
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  precipitationElement.innerHTML = response.data.main.precipitation;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -133,3 +159,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Enugu");
+displayForecast();
