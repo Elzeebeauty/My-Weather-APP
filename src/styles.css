@@ -62,7 +62,7 @@ font-size: 18px;
 
 .weather-condition {
   position: absolute;
-  top: 340px;
+  top: 370px;
   left: 157px;
   color:darkblue;
   font-weight: 600;
@@ -74,13 +74,14 @@ font-size: 18px;
 }
 #current-temp{
   position:absolute;
-  top: 285px;
-  left: 216px;
+  top: 275px;
+  left: 230px;
 }
-#degree-temp{
+#celsius{
   position:absolute;
-  top: 265px;
-  left: 265px;
+  top: 275px;
+  left: 285px;
+  color: darkblue;
 }
   .card-text{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
