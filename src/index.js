@@ -42,14 +42,14 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-      <div class="col-2">
+      <div class="col">
         <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
         <img
           src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="59"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -128,7 +128,12 @@ function displayLocation(position) {
 
 function getCurrentPosition(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(displayLocation);
+  let currentLocationButton = document.querySelector("#current-button");
+  let presentCity = document.querySelector("#present-city");
+  if (currentLocationButton) {
+    presentCity.innerHTML =
+      navigator.geolocation.getCurrentPosition(displayLocation);
+  }
 }
 
 let button = document.querySelector("#current-button");
