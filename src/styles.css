@@ -32,38 +32,33 @@
 }
 #present-city{
   position:absolute;
-  top: 150px;
-  left: 263px;
+  top: 298px;
+  left: 563px;
   text-align: center;
   color: rgb(53, 47, 133);
   font-size: 60px;
   font-weight:bold;
   font-family: 'Raleway', sans-serif;
 }
-
-.preciseButton {
-  color: #fff;
-  padding: 10px 20px;
-}
 #current-time{
 position: absolute;
-top: 120px;
-left: 55px;
+top: 280px;
+left: 345px;
 text-align: center;
 font-size: 18px;
 }
 #current-date{
   position: absolute;
-  top: 140px;
-  left: 55px;
+  top: 300px;
+  left: 345px;
   font-size: 17px;
   text-align: center;
 }
 
 .weather-condition {
   position: absolute;
-  top: 290px;
-  left: 250px;
+  top: 550px;
+  left: 550px;
   color: rgb(34, 25, 158);
   font-weight: 600;
   list-style: none;
@@ -74,13 +69,13 @@ font-size: 18px;
 }
 #current-temp{
   position:absolute;
-  top: 220px;
-  left: 330px;
+  top: 378px;
+  left: 630px;
 }
 #celsius{
   position:absolute;
-  top: 220px;
-  left: 380px;
+  top: 380px;
+  left: 680px;
   color: darkblue;
   font-size: 26px;
   text-decoration:solid;
