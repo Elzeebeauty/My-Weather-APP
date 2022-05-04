@@ -126,17 +126,4 @@ function displayLocation(position) {
   axios.get(apiUrl).then(displayTemp);
 }
 
-function getCurrentPosition(event) {
-  event.preventDefault();
-  let currentLocationButton = document.querySelector("#current-button");
-  let presentCity = document.querySelector("#present-city");
-  if (currentLocationButton) {
-    presentCity.innerHTML =
-      navigator.geolocation.getCurrentPosition(displayLocation);
-  }
-}
-
-let button = document.querySelector("#current-button");
-button.addEventListener("click", getCurrentPosition);
-
 search("Enugu");
