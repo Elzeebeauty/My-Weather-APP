@@ -33,7 +33,7 @@
 #present-city{
   position:absolute;
   top: 283px;
-  left: 456px;
+  left: 356px;
   text-align: center;
   color: rgb(53, 47, 133);
   font-size: 60px;
@@ -43,14 +43,14 @@
 #current-time{
 position: absolute;
 top: 260px;
-left: 218px;
+left: 118px;
 text-align: center;
 font-size: 18px;
 }
 #current-date{
   position: absolute;
   top: 280px;
-  left: 218px;
+  left: 118px;
   font-size: 17px;
   text-align: center;
 }
@@ -58,7 +58,7 @@ font-size: 18px;
 .weather-condition {
   position: absolute;
   top: 460px;
-  left: 452px;
+  left: 352px;
   color: rgb(34, 25, 158);
   font-weight: 600;
   list-style: none;
@@ -70,12 +70,12 @@ font-size: 18px;
 #current-temp{
   position:absolute;
   top: 378px;
-  left: 540px;
+  left: 440px;
 }
 #celsius{
   position:absolute;
   top: 380px;
-  left: 588px;
+  left: 488px;
   color: darkblue;
   font-size: 26px;
   text-decoration:solid;
