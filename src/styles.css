@@ -15,7 +15,7 @@
 
 .search {
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 246px;
   border-radius: 26px;
   border-color: transparent;
@@ -32,8 +32,8 @@
 }
 #present-city{
   position:absolute;
-  top: 298px;
-  left: 563px;
+  top: 283px;
+  left: 390px;
   text-align: center;
   color: rgb(53, 47, 133);
   font-size: 60px;
@@ -42,23 +42,23 @@
 }
 #current-time{
 position: absolute;
-top: 280px;
-left: 345px;
+top: 260px;
+left: 298px;
 text-align: center;
 font-size: 18px;
 }
 #current-date{
   position: absolute;
-  top: 300px;
-  left: 345px;
+  top: 280px;
+  left: 298px;
   font-size: 17px;
   text-align: center;
 }
 
 .weather-condition {
   position: absolute;
-  top: 420px;
-  left: 550px;
+  top: 460px;
+  left: 450px;
   color: rgb(34, 25, 158);
   font-weight: 600;
   list-style: none;
@@ -70,12 +70,12 @@ font-size: 18px;
 #current-temp{
   position:absolute;
   top: 378px;
-  left: 630px;
+  left: 520px;
 }
 #celsius{
   position:absolute;
   top: 380px;
-  left: 680px;
+  left: 580px;
   color: darkblue;
   font-size: 26px;
   text-decoration:solid;
