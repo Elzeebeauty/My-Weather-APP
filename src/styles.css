@@ -23,7 +23,7 @@
 }
 
 .title {
-   color: #fff;
+  color: #fff;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 7px;
@@ -33,7 +33,7 @@
 #present-city{
   position:absolute;
   top: 283px;
-  left: 556px;
+  left: 456px;
   text-align: center;
   color: rgb(53, 47, 133);
   font-size: 60px;
@@ -43,14 +43,14 @@
 #current-time{
 position: absolute;
 top: 260px;
-left: 318px;
+left: 218px;
 text-align: center;
 font-size: 18px;
 }
 #current-date{
   position: absolute;
   top: 280px;
-  left: 318px;
+  left: 218px;
   font-size: 17px;
   text-align: center;
 }
@@ -58,7 +58,7 @@ font-size: 18px;
 .weather-condition {
   position: absolute;
   top: 460px;
-  left: 552px;
+  left: 452px;
   color: rgb(34, 25, 158);
   font-weight: 600;
   list-style: none;
@@ -70,12 +70,12 @@ font-size: 18px;
 #current-temp{
   position:absolute;
   top: 378px;
-  left: 640px;
+  left: 540px;
 }
 #celsius{
   position:absolute;
   top: 380px;
-  left: 688px;
+  left: 588px;
   color: darkblue;
   font-size: 26px;
   text-decoration:solid;
